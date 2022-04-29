@@ -2,7 +2,7 @@ const util = require('util')
 const fs = require('fs')
 
 const readFileAsync = util.promisify(fs.readFile)
-
+const uuid = require('uuid')
 
 class Store {
     read() {
@@ -19,6 +19,16 @@ class Store {
             }
             return parsedNotes
         })
+    }
+    addNote(note) {
+        const notes = { noteTitle , noteText, id: uuid() }
+        return this.getNotes().then((notes) => {
+
+        })
+    }
+
+    removeNotes() {
+
     }
 }
 
