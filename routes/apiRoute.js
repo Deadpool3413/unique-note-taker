@@ -33,6 +33,6 @@ router.delete("/notes/:id", (req, res) => {
     else {
         res.status(404)
     }
-})
+});
 
 module.exports = router
